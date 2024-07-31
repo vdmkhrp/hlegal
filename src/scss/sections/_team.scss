@@ -1,0 +1,65 @@
+.team {
+  padding-bottom: 60px;
+
+  &__card {
+    border-radius: 12px;
+    background-color: $grey--200;
+    margin-bottom: 30px;
+
+    @media (width >= 1024px) {
+      display: flex;
+    }
+  }
+
+  &__card-photo {
+    height: 500px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+
+    @media (width >= 1024px) {
+      min-width: 400px;
+      height: auto;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 12px;
+    }
+  }
+
+  &__card-photo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__card-content {
+    padding: 30px;
+  }
+
+  &__card-link {
+    @extend .main-link, %h3--caps;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__card-title {
+    @extend %h1, %h1--gradient;
+    padding-bottom: 30px;
+    line-height: 1.2;
+    word-break: break-all;
+  }
+
+  &__card-subtitle {
+    @extend %h4;
+    color: $grey--500;
+    margin-bottom: 6px;
+  }
+
+  &__card-text {
+    @extend %p--small;
+    color: $grey--500;
+  }
+}

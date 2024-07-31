@@ -1,0 +1,54 @@
+.main-button {
+  @extend %h4;
+  min-width: 183px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $light;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 30px;
+  background-color: $light-blue--300;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+  transition-property: background-color, transform;
+  transition-duration: $animation-duration;
+  transition-timing-function: ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $light-blue--400;
+    }
+  }
+  &:active {
+    background-color: $light-blue--500;
+    transform: translateY(3px);
+  }
+  .preloader {
+    display: none;
+  }
+  &--response {
+    box-shadow: none;
+    background-color: $grey--300;
+    color: $dark-blue--500;
+    &:hover {
+      background-color: $grey--500;
+    }
+    &:active {
+      background-color: $grey--300;
+    }
+  }
+  &--loader {
+    box-shadow: none;
+    background-color: $grey--300;
+    &:hover {
+      background-color: $grey--400;
+    }
+    &:active {
+      background-color: $grey--300;
+    }
+    .preloader {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.popup {
+  display: none;
+  position: relative;
+  padding: 30px;
+  max-width: 650px;
+  background-color: $grey--200;
+  border-radius: 12px;
+  box-shadow: 0px 15px 80px 0px rgba($dark-blue--700, 0.5);
+
+  @media (width <= 425px) {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &__title {
+    @extend %h1, %h1--gradient;
+    padding-bottom: 30px;
+
+    @media (width <=510px) {
+      max-width: 273px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__textarea {
+    min-height: 130px;
+    resize: none;
+  }
+
+  &__form-title {
+    @extend %h3--caps;
+    color: $grey--500;
+    padding-top: 30px;
+  }
+
+  &__form-button {
+    margin-top: 15px;
+  }
+
+  &__close-btn {
+    width: 32px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-property: background-color, transform;
+    transition-duration: $animation-duration;
+    transition-timing-function: ease-out;
+
+    &:active {
+      transform: translateY(3px);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--400;
+      }
+    }
+  }
+}
+
+
+.popup-wrapper {
+  display: none;
+  background-color: rgba($light, $alpha: 0.3);
+  // position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}

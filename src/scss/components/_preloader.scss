@@ -1,0 +1,14 @@
+.preloader {
+  width: 26.35px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid $light-blue--300;
+  border-right-color: transparent;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  to {
+     rotate: 360deg;
+  }
+}

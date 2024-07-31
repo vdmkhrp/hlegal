@@ -1,0 +1,79 @@
+%h1 {
+  font-size: 30px;
+  font-weight: 700;
+
+  &--gradient {
+    background-image: $accent-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (width >= 768px) {
+    font-size: 38px;
+  }
+}
+
+%h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+%h3 {
+  font-size: 22px;
+  font-weight: 700;
+
+  &--caps {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.0714em;
+    text-transform: uppercase;
+  }
+}
+
+%h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+%p {
+  font-size: 16px;
+  line-height: 1.625;
+
+  &--small {
+    font-size: 14px;
+    line-height: 1.5714;
+  }
+}
+
+%ul {
+
+  li {
+    font-size: 18px;
+    line-height: 1.4444;
+
+    @media (width >= 768px) {
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--list-marker-color, $accent);
+      }
+    }
+  }
+}
+
+%ol {
+  list-style-type: decimal;
+
+  li {
+    font-size: 18px;
+    line-height: 1.4444;
+
+    &::marker {
+      color: $accent;
+      font-weight: 700;
+    }
+  }
+}

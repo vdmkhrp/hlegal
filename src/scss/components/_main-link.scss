@@ -1,0 +1,28 @@
+.main-link {
+  font-size: 16px;
+  line-height: 1.25;
+  color: $light-blue--300;
+  transition: color $animation-duration ease;
+  @media (hover: hover) {
+    &:hover {
+      color: $accent;
+    }
+  }
+  &--light {
+    color: $light;
+  }
+}
+
+
+// @media (width < 1920px) {  //for 1440 ------ 320 v @media (width >= 768px) { for 768px
+//   min-height: 800px;
+// }
+// @media (max-width: 1439px) {
+//   min-height: 768px;
+// }
+// @media (max-width: 1023px) {
+//   min-height: 1024px;
+// }
+// @media (max-width: 767px) {
+//   min-height: 600px;
+// }

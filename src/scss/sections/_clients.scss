@@ -1,0 +1,148 @@
+.clients {
+  text-align: center;
+
+  @media (width >=1920px) {
+    max-width: 1720px;
+    margin-inline: auto;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    @extend %h3--caps;
+    color: $dark-blue--500;
+    padding-bottom: 30px;
+  }
+
+  &__grid {
+    display: grid;
+    background-color: rebeccapurple;
+
+    @media (width >=768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (width >=1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (width >=1920px) {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+
+  &__cell {
+    height: 120px;
+
+    &--hillel {
+      background-color: #1c4280;
+
+      .clients__img {
+        max-width: 217px;
+      }
+    }
+
+    &--wannabiz {
+      background-color: #143646;
+
+      .clients__img {
+        max-width: 199px;
+      }
+    }
+
+    &--tapgerine {
+      background-color: #f48b30;
+
+      .clients__img {
+        max-width: 179px;
+      }
+    }
+
+    &--3dlook {
+      background-color: #9e4dc3;
+
+      .clients__img {
+        max-width: 180px;
+      }
+    }
+
+    &--orangear {
+      background-color: #fd9339;
+
+      .clients__img {
+        max-width: 174px;
+      }
+    }
+
+    &--adtellige {
+      background-color: #e2e2e4;
+
+      .clients__img {
+        max-width: 133px;
+      }
+    }
+
+    &--clickky {
+      background-color: #c71c36;
+
+      .clients__img {
+        max-width: 138px;
+      }
+    }
+
+    &--eco-leasing {
+      background-color: #dcf3f9;
+
+      .clients__img {
+        max-width: 146px;
+      }
+    }
+
+    &--infratek {
+      background-color: #eaeaea;
+
+      .clients__img {
+        max-width: 182px;
+      }
+    }
+
+    &--city-park {
+      background-color: #282240;
+
+      .clients__img {
+        max-width: 181px;
+      }
+    }
+
+    &--artprint {
+      background-color: #1d4568;
+
+      .clients__img {
+        max-width: 189px;
+      }
+    }
+
+    &--ultimatecard {
+      background-color: #000;
+
+      .clients__img {
+        max-width: 152px;
+      }
+    }
+
+    &:nth-child(n + 7) {
+      display: none;
+
+      @media (width >=768px) {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}

@@ -1,0 +1,29 @@
+$dark-blue--700: #282856;
+$dark-blue--500: #323264;
+$dark-blue--400: #46466E;
+$dark-blue--300: #686887;
+
+$purple--500: #643E72;
+
+$light-blue--500: #006CCF;
+$light-blue--400: #0085FF;
+$light-blue--300: #24A3FF;
+$light-blue--100: #D8ECFD;
+
+$grey--500: #B3B3BA;
+$grey--400: #E6E6F0;
+$grey--300: #EDEDF7;
+$grey--200: #F5F5FA;
+
+$light: #fff;
+$dark: #000;
+
+$red--500: #F0145A;
+$red--200: #EF8080;
+
+$error: #FF0000;
+$accent: $red--500;
+$accent-gradient: linear-gradient(-62deg, $red--500 0%, $red--200 100%);
+$supersoft-gradient: linear-gradient(233deg, $dark-blue--500 0%, $dark-blue--500 60%, $purple--500 100%);
+
+$animation-duration: .3s;

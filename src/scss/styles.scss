@@ -1,0 +1,37 @@
+//-----base
+@import "./base/custom-reset";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/typography";
+
+
+//-----components
+@import "./components/gradient-wrapper";
+@import "./components/icon";
+@import "./components/preloader";
+@import "./components/main-link";
+@import "./components/burger-btn";
+@import "./components/swiper-pagination";
+@import "./components/main-button";
+@import "./components/input";
+@import "./components/popup";
+
+
+//-----layout
+@import "./layout/general";
+@import "./layout/header";
+@import "./layout/footer";
+
+
+//-----utils
+@import "./utils/helpers";
+
+
+//-----sections
+@import "./sections/hero";
+@import "./sections/experience";
+@import "./sections/services";
+@import "./sections/team";
+@import "./sections/clients";
+@import "./sections/publications";
+@import "./sections/service-entry";

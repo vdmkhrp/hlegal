@@ -9,6 +9,12 @@
   padding: 10px 7px;
   background-color: transparent;
   border: none;
+  border-radius: 8px;
+  transition: background-color $animation-duration ease-in-out;
+
+  &:active {
+    background-color: $accent;
+  }
 
   &__item {
     display: block;

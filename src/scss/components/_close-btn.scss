@@ -1,0 +1,25 @@
+.close-btn {
+  width: 32px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-property: background-color, transform;
+  transition-duration: $animation-duration;
+  transition-timing-function: ease-out;
+
+  &:active {
+    transform: translateY(3px);
+    background-color: $grey--400;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $grey--400;
+    }
+  }
+}

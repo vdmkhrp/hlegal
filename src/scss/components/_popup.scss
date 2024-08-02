@@ -54,31 +54,9 @@
   }
 
   &__close-btn {
-    width: 32px;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 30px;
     right: 30px;
     padding: 0;
-    border: none;
-    background-color: transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    transition-property: background-color, transform;
-    transition-duration: $animation-duration;
-    transition-timing-function: ease-out;
-
-    &:active {
-      transform: translateY(3px);
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $grey--400;
-      }
-    }
   }
 }

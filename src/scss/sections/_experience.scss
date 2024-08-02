@@ -35,7 +35,8 @@
     overflow-y: hidden;
 
     &::-webkit-scrollbar {
-      width: 0;
+      // width: 0;
+      -webkit-appearance: none;
     }
 
     @media (width >= 768px) {

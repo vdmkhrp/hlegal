@@ -33,10 +33,27 @@
     column-gap: 30px;
     overflow-x: scroll;
     overflow-y: hidden;
+    scrollbar-width: none;
+    scrollbar-color: transparent;
 
     &::-webkit-scrollbar {
-      // width: 0;
-      -webkit-appearance: none;
+      width: 0;
+      -webkit-appearance: none
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      width: 0;
+      border: none;
+      height: 0;
+      display: none;
     }
 
     @media (width >= 768px) {

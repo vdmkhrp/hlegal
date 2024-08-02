@@ -18,21 +18,13 @@
       type="image/png"
       sizes="16x16"
     />
-    <link rel="stylesheet" href="./src/scss/styles.scss" />
-    <title>Homepage</title>
+    <link rel="stylesheet" href="../scss/styles.scss" />
+    <title>Publications</title>
   </head>
   <body>
     <svg width="0" height="0" class="svg-settings">
-      <symbol
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        id="telegram"
-      >
-        <path
-          d="M9 17.9414L7.5 13.4414L24 1.44141L0.932997 10.3124C0.932997 10.3124 -0.0750025 10.6574 0.00449746 11.2949C0.0839975 11.9324 0.907497 12.2234 0.907497 12.2234L6.27 14.0279L8.7 21.7589L12.813 18.1424L12.8025 18.1349L18.213 22.2839C19.6725 22.9214 20.2035 21.5939 20.2035 21.5939L24 1.44141L9 17.9414Z"
-          fill="#3CACDC"
-        ></path>
+      <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="telegram">
+        <path d="M9 17.9414L7.5 13.4414L24 1.44141L0.932997 10.3124C0.932997 10.3124 -0.0750025 10.6574 0.00449746 11.2949C0.0839975 11.9324 0.907497 12.2234 0.907497 12.2234L6.27 14.0279L8.7 21.7589L12.813 18.1424L12.8025 18.1349L18.213 22.2839C19.6725 22.9214 20.2035 21.5939 20.2035 21.5939L24 1.44141L9 17.9414Z" fill="#3CACDC"></path>
       </symbol>
       <symbol
         fill="none"
@@ -536,356 +528,97 @@
         </defs>
       </symbol>
     </svg>
-    <div class="gradient-wrapper">
-      <header class="header header--absolute">
-        <div class="header__top">
-          <div class="header__lang">
-            <button type="button" class="header__lang-btn">ук</button>
-            <button type="button" class="header__lang-btn">ру</button>
-            <button
-              type="button"
-              class="header__lang-btn header__lang-btn--active"
-            >
-              en
-            </button>
-          </div>
-          <ul class="header__list">
-            <li class="header__list-item header__list-item--color">
-              Kyiv, Mechnikova str, 14/1
-            </li>
-            <li class="header__list-item show-mobile">
-              <a
-                href="tel:0800211927"
-                class="header__list-link header__list-link--weight"
-                >0800 211 927</a
-              >
-            </li>
-            <li class="header__list-item">
-              <a href="#!" class="header__list-link">
-                <svg class="icon icon--24">
-                  <use xlink:href="#facebook" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="header__bottom">
-          <a href="#!" class="header__logo">
-            <img
-              src="./src/img/logo.svg"
-              alt="logo"
-              class="header__logo-image"
-            />
-            <svg class="icon header__logo-icon header__logo-icon--hidden">
-              <use xlink:href="#slash" />
-            </svg>
-            <span class="header__logo-text header__logo-text--hidden"
-              >services</span
-            >
-          </a>
-          <button type="button" class="burger-btn">
-            <span class="burger-btn__item"></span>
+    <header class="header">
+      <div class="header__top header__top--dark">
+        <div class="header__lang">
+          <button type="button" class="header__lang-btn header__lang-btn--dark">
+            ук
           </button>
-          <div class="header__nav">
-            <a href="#!" class="header__nav-link">about us</a>
-            <a href="./src/pages/services.html" class="header__nav-link"
-              >services</a
-            >
-            <a href="#!" class="header__nav-link">team</a>
-            <a href="./src/pages/publications.html" class="header__nav-link"
-              >publications</a
-            >
-            <a href="#!" class="header__nav-link">contact</a>
-            <button type="button" class="close-btn header__nav-close-btn">
-              <svg class="icon icon--18">
-                <use xlink:href="#close" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero__title">you legal solutions provider</h1>
-        </div>
-        <a href="#services" class="hero__link">
-          <svg class="icon icon--42">
-            <use xlink:href="#scroll" />
-          </svg>
-        </a>
-      </section>
-      <section class="experience">
-        <div class="experience__top">
-          <a href="#!" class="experience__link experience__link--active"
-            >Consistent</a
-          >
-          <a href="#!" class="experience__link">Customer oriented</a>
-          <a href="#!" class="experience__link">Innovative</a>
-          <a href="#!" class="experience__link">Business oriented</a>
-        </div>
-        <div class="container">
-          <div class="experience__bottom">
-            <h2 class="experience__subtitle">
-              We turn the idea of legal services
-            </h2>
-            <p class="experience__text">
-              Consolidating many years of experience and practice, the company's
-              lawyers accompany complex projects and achieve a number of
-              important decisions for the industry. Many of them form the
-              practice of applying the law of the sea in Ukraine.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="services" id="services">
-        <div class="container">
-          <a href="#!" class="services__link"
-            >Services
-            <svg class="icon icon--12">
-              <use xlink:href="#caret-right"></use>
-            </svg>
-          </a>
-          <h2 class="services__title">What can we do better than others?</h2>
-          <div class="services__cards">
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#ecommerce"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">IT and e-commerce</h3>
-              <p class="services__cards-item-text">
-                An endless stream of contracts, tax issues, labor relations,
-                corporate papers - legal work distracts you from doing business.
-                But there is not much work to do to hire an in-house lawyer.
-              </p>
-            </a>
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#support"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">
-                Comprehensive daily<br />legal support
-              </h3>
-              <p class="services__cards-item-text">
-                In addition, over time, the work will become the same type and
-                uninteresting for a full-time lawyer. And we know very well how
-                difficult it is to find a good candidate with experience in the
-                field of information technology in Ukraine.
-              </p>
-            </a>
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#coprorate"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">
-                Structuring corporate relationships
-              </h3>
-              <p class="services__cards-item-text">
-                Instead of just providing legal services, we will hire a lawyer
-                or a whole team that will fit into the daily life of your
-                company.
-              </p>
-            </a>
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#trust"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">
-                Building contractual relations
-              </h3>
-              <p class="services__cards-item-text">
-                Once a week, or week after month, you have your own lawyer by
-                your side. Anyone in the company can catch it at the coffee
-                maker and just talk about current affairs instead of waiting for
-                update status.
-              </p>
-            </a>
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#protection"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">
-                Protection of business, intellectual property
-              </h3>
-              <p class="services__cards-item-text">
-                And all the other time he will work on new diverse projects, so
-                he will definitely not stop in professional development. One way
-                or another, all Axon Partners will work for you instead of a
-                corporate lawyer.
-              </p>
-            </a>
-            <a
-              href="./src/pages/service-entry.html"
-              class="services__cards-item"
-            >
-              <div class="services__cards-item-image">
-                <svg class="icon icon--64">
-                  <use xlink:href="#court"></use>
-                </svg>
-              </div>
-              <h3 class="services__cards-item-title">
-                Judicial representation
-              </h3>
-              <p class="services__cards-item-text">
-                Is it a small, medium-sized company or a market leader? Local
-                business or multinational company? Do you have your own legal
-                department or not?
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-    <section class="team">
-      <div class="container">
-        <div class="team__card">
-          <div class="team__card-photo">
-            <img
-              class="team__card-photo-img"
-              src="./src/img/alexander.jpg"
-              alt="alexander"
-            />
-          </div>
-          <div class="team__card-content">
-            <a href="#!" class="team__card-link"
-              >команда
-              <svg class="icon icon--12">
-                <use xlink:href="#caret-right"></use>
-              </svg>
-            </a>
-            <h2 class="team__card-title">
-              Ми звикли брати на себе відповідальність та завжди гарантуємо
-              чесну, вчасну допомогу, навіть у ситуаціях, коли більшість
-              безсилі.
-            </h2>
-            <h4 class="team__card-subtitle">Олександр Олександровський</h4>
-            <p class="team__card-text">Керуючий партнер</p>
-          </div>
-        </div>
-        <div class="swiper-pagination">
+          <button type="button" class="header__lang-btn header__lang-btn--dark">
+            ру
+          </button>
           <button
             type="button"
-            class="swiper-pagination__btn swiper-pagination__btn--active"
-          ></button>
-          <button type="button" class="swiper-pagination__btn"></button>
-          <button type="button" class="swiper-pagination__btn"></button>
+            class="header__lang-btn header__lang-btn--dark header__lang-btn--active"
+          >
+            en
+          </button>
+        </div>
+        <ul class="header__list">
+          <li class="header__list-item header__list-item--color">
+            Kyiv, Mechnikova str, 14/1
+          </li>
+          <li class="header__list-item show-mobile">
+            <a
+              href="tel:0800211927"
+              class="header__list-link header__list-link--dark header__list-link--weight"
+              >0800 211 927</a
+            >
+          </li>
+          <li class="header__list-item">
+            <a href="#!" class="header__list-link header__list-link--dark">
+              <svg class="icon icon--24">
+                <use xlink:href="#facebook" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__bottom">
+        <a href="../../index.html" class="header__logo">
+          <img
+            src="../img/logo-dark.svg"
+            alt="logo"
+            class="header__logo-image"
+          />
+          <svg class="icon header__logo-icon">
+            <use xlink:href="#slash" />
+          </svg>
+          <span class="header__logo-text header__logo-text--dark"
+            >publications</span
+          >
+        </a>
+        <button type="button" class="burger-btn burger-btn--dark">
+          <span class="burger-btn__item burger-btn__item--dark"></span>
+        </button>
+        <div class="header__nav">
+          <a href="#!" class="header__nav-link header__nav-link--dark"
+            >about us</a
+          >
+          <a
+            href="./services.html"
+            class="header__nav-link header__nav-link--dark"
+            >services</a
+          >
+          <a href="#!" class="header__nav-link header__nav-link--dark">team</a>
+          <a
+            href="#!"
+            class="header__nav-link header__nav-link--dark header__nav-link--active"
+            >publications</a
+          >
+          <a href="#!" class="header__nav-link header__nav-link--dark"
+            >contact</a
+          >
+          <button type="button" class="close-btn header__nav-close-btn">
+            <svg class="icon icon--18">
+              <use xlink:href="#close" />
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
-    <section class="clients">
-      <h3 class="clients__title">They already trust us</h3>
-      <div class="clients__grid">
-        <div class="clients__cell clients__cell--hillel">
-          <img src="./src/img/hillel.png" alt="hillel" class="clients__img" />
-        </div>
-        <div class="clients__cell clients__cell--wannabiz">
-          <img
-            src="./src/img/wannabiz.png"
-            alt="wannabiz"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--tapgerine">
-          <img
-            src="./src/img/tapgerine.png"
-            alt="tapgerine"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--3dlook">
-          <img src="./src/img/3dlook.png" alt="3dlook" class="clients__img" />
-        </div>
-        <div class="clients__cell clients__cell--orangear">
-          <img
-            src="./src/img/orangear.png"
-            alt="orangear"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--adtellige">
-          <img
-            src="./src/img/adtellige.png"
-            alt="adtellige"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--clickky">
-          <img src="./src/img/clickky.png" alt="clickky" class="clients__img" />
-        </div>
-        <div class="clients__cell clients__cell--eco-leasing">
-          <img
-            src="./src/img/eco-leasing.png"
-            alt="eco-leasing"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--infratek">
-          <img
-            src="./src/img/infratek.png"
-            alt="infratek"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--city-park">
-          <img
-            src="./src/img/city-park.png"
-            alt="city-park"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--artprint">
-          <img
-            src="./src/img/artprint.png"
-            alt="artprint"
-            class="clients__img"
-          />
-        </div>
-        <div class="clients__cell clients__cell--ultimatecard">
-          <img
-            src="./src/img/ultimatecard.png"
-            alt="ultimatecard"
-            class="clients__img"
-          />
-        </div>
-      </div>
-    </section>
+    </header>
     <section class="publications">
       <div class="container">
-        <a href="#!" class="publications__link"
-          >Publications
-          <svg class="icon icon--12">
-            <use xlink:href="#caret-right"></use>
-          </svg>
-        </a>
-        <h3 class="publications__title">We have something to tell</h3>
+        <div class="publications__tabs tabs">
+          <button type="button" class="tabs__item tabs__item--active">
+            news
+          </button>
+          <button type="button" class="tabs__item">articles</button>
+        </div>
         <div class="publications__cards">
           <a href="#!" class="publications__cards-item">
             <img
-              src="./src/img/equity.jpg"
+              src="../img/equity.jpg"
               alt="Equity"
               class="publications__cards-item-image"
             />
@@ -900,7 +633,7 @@
           </a>
           <a href="#!" class="publications__cards-item">
             <img
-              src="./src/img/gdpr.jpg"
+              src="../img/gdpr.jpg"
               alt="GDPR"
               class="publications__cards-item-image"
             />
@@ -919,7 +652,7 @@
           </a>
           <a href="#!" class="publications__cards-item">
             <img
-              src="./src/img/millennial.jpg"
+              src="../img/millennial.jpg"
               alt="Millennial"
               class="publications__cards-item-image"
             />
@@ -935,7 +668,61 @@
               </p>
             </div>
           </a>
+          <a href="#!" class="publications__cards-item">
+            <img
+              src="../img/lang.jpg"
+              alt="language"
+              class="publications__cards-item-image"
+            />
+            <div class="publications__cards-item-content">
+              <h4 class="publications__cards-item-title">
+                Language Law: How to Make Your Website Relevant
+              </h4>
+              <p class="publications__cards-item-date">August 19</p>
+              <p class="publications__cards-item-text">
+                Natalia Kyryk, head of content studio Wordfactory.ua First, it's
+                beautiful! This is the number one argument in favor of the
+                Ukrainian-language site. Secondly, it is effective. IN…
+              </p>
+            </div>
+          </a>
+          <a href="#!" class="publications__cards-item">
+            <img
+              src="../img/childs.jpg"
+              alt="childs"
+              class="publications__cards-item-image"
+            />
+            <div class="publications__cards-item-content">
+              <h4 class="publications__cards-item-title">
+                Reimbursement of the child's tuition fees in kindergarten and
+                school
+              </h4>
+              <p class="publications__cards-item-date">February 5, 2018</p>
+              <p class="publications__cards-item-text">
+                What we are talking about In June this year, the Verkhovna Rada
+                amended the Tax Code of Ukraine. From now on, parents who
+                receive an official…
+              </p>
+            </div>
+          </a>
+          <a href="#!" class="publications__cards-item">
+            <div class="publications__cards-item-content">
+              <h4 class="publications__cards-item-title">
+                Currency control is dead, long live currency control!
+              </h4>
+              <p class="publications__cards-item-date">June 14, 2018</p>
+              <p class="publications__cards-item-text">
+                Experts hold conferences, round tables and other events on
+                "liberalization of currency legislation."
+                Lawyers-experts-novelists rub their fingers about "ctrl + c /
+                ctrl + v".
+              </p>
+            </div>
+          </a>
         </div>
+        <button type="button" class="publications__button main-button">
+          More publications
+        </button>
       </div>
     </section>
     <footer class="footer">
@@ -980,6 +767,6 @@
         </div>
       </div>
     </footer>
-    <script src="./src/js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

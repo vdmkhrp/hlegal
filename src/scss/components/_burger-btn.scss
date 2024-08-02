@@ -10,10 +10,31 @@
   background-color: transparent;
   border: none;
   border-radius: 8px;
-  transition: background-color $animation-duration ease-in-out;
+  transition-property: background-color, transform;
+  transition-duration: $animation-duration;
+  transition-timing-function: ease;
 
   &:active {
     background-color: $accent;
+    transform: scale(1.2);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $accent;
+    }
+  }
+
+  &--dark {
+    &:active {
+      background-color: $grey--400;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--400;
+      }
+    }
   }
 
   &__item {
@@ -44,6 +65,15 @@
       width: 18px;
       height: 2px;
       background-color: $light;
+    }
+
+    &--dark {
+      background-color: $dark-blue--500;
+
+      &::after,
+      &::before {
+        background-color: $dark-blue--500;
+      }
     }
   }
 

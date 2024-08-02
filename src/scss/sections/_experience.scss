@@ -38,7 +38,8 @@
 
     &::-webkit-scrollbar {
       width: 0;
-      -webkit-appearance: none
+      -webkit-appearance: none;
+      background-color: transparent;
     }
 
     &::-webkit-scrollbar-track {
@@ -46,6 +47,7 @@
       height: 0;
       width: 0;
       display: none;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     }
 
     &::-webkit-scrollbar-thumb {
@@ -54,6 +56,7 @@
       border: none;
       height: 0;
       display: none;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     }
 
     @media (width >= 768px) {

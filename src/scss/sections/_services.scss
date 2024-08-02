@@ -1,9 +1,4 @@
 .services {
-  padding-top: 30px;
-
-  @media (width >= 768px) {
-    padding-top: 60px;
-  }
 
   &__link {
     @extend .main-link, %h3--caps;

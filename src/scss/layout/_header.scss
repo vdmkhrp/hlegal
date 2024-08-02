@@ -1,14 +1,12 @@
 .header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 10;
+  margin-bottom: 30px;
 
   @media (width >= 768px) {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
     padding: 50px 60px 0;
+    margin-bottom: 60px;
   }
 
   @media (width >= 1024px) {
@@ -21,6 +19,14 @@
   @media (width >= 1920px) {
     max-width: 1720px;
     margin-inline: auto;
+  }
+
+  &--absolute {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-bottom: 0;
   }
 
   &__top {

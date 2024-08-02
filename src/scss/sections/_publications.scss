@@ -17,16 +17,13 @@
   }
 
   &__cards {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 
     @media (width >= 768px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-    }
-
-    @media (width >= 1024px) {
-      grid-template-columns: repeat(3, 1fr);
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
@@ -35,15 +32,14 @@
     overflow: hidden;
     background-color: $light;
 
-    &:nth-child(3) {
       @media (width >= 768px) {
-        grid-column: 1 / 3;
+        flex-grow: 1;
+        flex-basis: 290px;
       }
 
       @media (width >= 1024px) {
-        grid-column: 3 / 3;
+        flex-basis: calc(33.3333% - 20px);
       }
-    }
   }
 
   &__cards-item-image {

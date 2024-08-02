@@ -14,10 +14,21 @@
   </head>
   <body>
     <svg width="0" height="0" class="svg-settings">
-        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="close">
-          <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"></path>
-          <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"></path>
-        </symbol>
+      <symbol
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 21 47"
+        id="slash"
+      ></symbol>
+      <symbol
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        id="close"
+      >
+        <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"></path>
+        <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"></path>
+      </symbol>
       <symbol
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -463,7 +474,7 @@
       </symbol>
     </svg>
     <div class="gradient-wrapper">
-      <header class="header">
+      <header class="header header--absolute">
         <div class="header__top">
           <div class="header__lang">
             <button type="button" class="header__lang-btn">ук</button>
@@ -876,23 +887,5 @@
         </div>
       </div>
     </footer>
-    <div class="popup-wrapper">
-      <div class="popup">
-        <h2 class="popup__title">We would like to help you</h2>
-        <form class="popup__form">
-          <input class="input popup__input" type="text" placeholder="Name" minlength="4" maxlength="16">
-          <textarea class="input popup__textarea" name="Message" id="" placeholder="Message"></textarea>
-          <h3 class="popup__form-title">How to answer you?</h3>
-          <input class="input popup__input" type="number" placeholder="Phone number">
-          <input class="input popup__input" type="email" placeholder="Email" minlength="4" maxlength="40">
-          <button type="submit" class="popup__form-button main-button">Send message</button>
-        </form>
-        <button type="button" class="popup__close-btn">
-          <svg class="icon icon--18">
-            <use xlink:href="#close" />
-          </svg>
-        </button>
-      </div>
-    </div>
   </body>
 </html>

@@ -3,7 +3,7 @@ const menu = document.querySelector(".header__nav");
 const closeBtn = document.querySelector(".close-btn");
 
 burgerBtn.addEventListener("click", () => {
-  menu.classList.add("active");
+  menu.classList.toggle("active");
 });
 
 closeBtn.addEventListener("click", () => {

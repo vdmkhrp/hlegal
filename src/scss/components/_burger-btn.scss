@@ -1,4 +1,5 @@
 .burger-btn {
+  $root: &;
   position: relative;
   display: flex;
   align-items: center;
@@ -22,18 +23,6 @@
   @media (hover: hover) {
     &:hover {
       background-color: $accent;
-    }
-  }
-
-  &--dark {
-    &:active {
-      background-color: $grey--400;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $grey--400;
-      }
     }
   }
 
@@ -66,18 +55,32 @@
       height: 2px;
       background-color: $light;
     }
-
-    &--dark {
-      background-color: $dark-blue--500;
-
-      &::after,
-      &::before {
-        background-color: $dark-blue--500;
-      }
-    }
   }
 
   @media (width >= 768px) {
     display: none;
+  }
+
+  &--dark {
+    &:active {
+      background-color: $grey--400;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--400;
+      }
+    }
+
+    #{$root} {
+      &__item {
+        background-color: $dark-blue--500;
+
+        &::after,
+        &::before {
+          background-color: $dark-blue--500;
+        }
+      }
+    }
   }
 }

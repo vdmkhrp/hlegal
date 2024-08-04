@@ -1,4 +1,5 @@
 .header {
+  $root: &;
   margin-bottom: 30px;
 
   @media (width >= 768px) {
@@ -37,10 +38,6 @@
     padding: 10px 15px;
     margin-bottom: 15px;
 
-    &--dark {
-      background-color: $grey--200;
-    }
-
     @media (width >= 768px) {
       justify-content: flex-start;
       column-gap: 6px;
@@ -78,15 +75,6 @@
     @media (hover: hover) {
       &:hover {
         background-color: rgba($light, 0.2);
-      }
-    }
-
-    &--dark {
-      color: $grey--500;
-      @media (hover: hover) {
-        &:hover {
-          background-color: $grey--200;
-        }
       }
     }
 
@@ -129,10 +117,6 @@
       &:hover {
         color: $accent;
       }
-    }
-
-    &--dark {
-      color: $grey--500;
     }
   }
 
@@ -204,10 +188,6 @@
       font-size: 36px;
     }
 
-    &--dark {
-      color: $dark-blue--500;
-    }
-
     &--hidden {
       @media (width >= 768px) {
         display: none;
@@ -216,11 +196,36 @@
   }
 
   &__nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    text-align: center;
+    background-color: $light;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-inline: 8px;
+    padding: 64px 12px 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $animation-duration ease-in-out;
 
     @media (width >= 768px) {
-      display: flex;
+      flex-direction: row;
       column-gap: 15px;
+      background-color: transparent;
+      position: static;
+      text-align: start;
+      margin-inline: 0;
+      padding: 0;
+      border-radius: 0;
+      opacity: 1;
+      visibility: visible;
     }
 
     @media (width >= 1024px) {
@@ -232,88 +237,130 @@
     }
 
     &.active {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 15px;
-      text-align: center;
-      background-color: $light;
-      position: fixed;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      margin-inline: 8px;
-      padding: 64px 12px 12px;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      z-index: 10;
-
-      .header__nav-link {
-        font-size: 24px;
-        font-weight: 700;
-        background-color: $grey--200;
-        color: $light-blue--300;
-        width: 100%;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        border-radius: 12px;
-
-        @media (hover: hover) {
-          &:hover {
-            border-color: transparent;
-            background-color: $grey--400;
-          }
-        }
-      }
-
-      .header__nav-close-btn {
-        display: flex;
-        position: absolute;
-        top: 12px;
-        right: 12px;
-      }
-      .header__nav-link--active {
-        color: $accent;
-        border: none;
-      }
+      opacity: 1;
+      visibility: visible;
     }
   }
 
   &__nav-link {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
-    color: $light;
-    border-bottom: 2px solid transparent;
+    background-color: $grey--200;
+    color: $light-blue--300;
+    width: 100%;
+    padding-top: 7px;
     padding-bottom: 7px;
-    transition-property: border-color;
-    transition-duration: $animation-duration;
-    transition-timing-function: ease;
+    border-radius: 12px;
+    white-space: nowrap;
 
     @media (hover: hover) {
       &:hover {
-        border-color: $light;
+        background-color: $grey--400;
       }
     }
 
-    &--dark {
-      color: $light-blue--300;
-
-      @media (hover: hover) {
-        &:hover {
-          border-color: $light-blue--300;
-        }
-      }
+    &:active {
+      background-color: $grey--400;
     }
 
     &--active {
       color: $accent;
-      border-color: $accent;
-      pointer-events: none;
+    }
+
+    @media (width >= 768px) {
+      font-size: 16px;
+      font-weight: 700;
+      color: $light;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 7px;
+      transition-property: border-color;
+      transition-duration: $animation-duration;
+      transition-timing-function: ease;
+      background-color: transparent;
+      border-radius: 0;
+      padding-top: 0;
+
+      @media (hover: hover) {
+        &:hover {
+          border-color: $light;
+          background-color: transparent;
+        }
+      }
+
+      &--active {
+        color: $accent;
+        border-color: $accent;
+        pointer-events: none;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
     }
   }
 
   &__nav-close-btn {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    @media (width >= 768px) {
+      display: none;
+    }
+  }
+
+  &--dark {
+    #{$root} {
+      &__top {
+        background-color: $grey--200;
+
+        @media (width >=768px) {
+          background-color: transparent;
+        }
+      }
+
+      &__lang-btn {
+        color: $grey--500;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: $grey--200;
+          }
+        }
+
+        &--active {
+          color: $light;
+        }
+      }
+
+      &__list-link {
+        color: $grey--500;
+
+        @media (hover: hover) {
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+
+      &__logo-text {
+        color: $dark-blue--500;
+      }
+
+      &__nav-link {
+        color: $light-blue--300;
+
+        @media (hover: hover) {
+          &:hover {
+            border-color: $light-blue--300;
+          }
+        }
+
+        &--active {
+          color: $accent;
+        }
+      }
+    }
   }
 }

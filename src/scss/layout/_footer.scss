@@ -1,4 +1,5 @@
 .footer {
+  $root: &;
   background-color: $grey--200;
 
   &__container {

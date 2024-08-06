@@ -1,0 +1,126 @@
+.publication-entry {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+
+    @media (width >= 768px) {
+      height: 500px;
+    }
+  }
+
+  &__title-basic {
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark-blue--500;
+    margin-bottom: -15px;
+
+    @media (width >= 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__date {
+    @extend %h3--caps;
+    position: relative;
+    font-size: 12px;
+    color: $grey--500;
+    padding-bottom: 34px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $grey--400;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+
+  &__text {
+    @extend %p;
+    color: $dark;
+  }
+
+  &__title {
+    @extend %h1, %h1--gradient;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: $dark-blue--500;
+    margin-bottom: -15px;
+
+    @media (width >= 768px) {
+      font-size: 22px;
+    }
+  }
+
+  &__list {
+    @extend %ol;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__list-item {
+    padding-left: 5px;
+  }
+
+  &__image-second {
+    display: block;
+    width: 100%;
+    height: 196px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+    margin-bottom: -15px;
+
+    @media (width >= 768px) {
+      height: 398px;
+      width: 640px;
+    }
+  }
+
+  &__text-second {
+    @extend %p--small;
+    color: $grey--500;
+    text-align: center;
+  }
+
+  &__social {
+    padding-top: 30px;
+    border-top: 4px solid $grey--400;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    border-radius: 12px;
+    background-color: $grey--200;
+    transition: background-color $animation-duration ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--300;
+      }
+    }
+  }
+}

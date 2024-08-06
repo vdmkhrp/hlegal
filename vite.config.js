@@ -22,7 +22,10 @@ export default defineConfig({
   base: "",
   build: {
     rollupOptions: {
-      input: getHtmlInputs(),
+      input: {
+        ...getHtmlInputs(),
+        main: resolve(__dirname, "src/js/script.js"),  // Укажите путь к вашему script.js в src/js/
+      },
     },
     outDir: "dist",
     assetsDir: "assets",

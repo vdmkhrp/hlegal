@@ -1,18 +1,146 @@
 .team-entry {
   padding-bottom: 60px;
 
+  &__container {
+    @media (width >= 1440px) {
+      max-width: 1200px;
+    }
+
+    @media (width >= 1920px) {
+      max-width: 1360px;
+    }
+  }
+
   &__card {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
+    @media (width >= 1024px) {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      column-gap: 60px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (width >= 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media (width >= 1024px) {
+      display: contents;
+    }
   }
 
   &__image {
     display: block;
     border-radius: 12px;
-    height: 300px;
+    height: 375px;
     width: 100%;
     object-fit: cover;
     object-position: center;
+
+    @media (width >= 768px) {
+      width: 300px;
+    }
+
+    @media (width >= 1024px) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    @media (width >= 1440px) {
+      width: 400px;
+      height: 500px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (width >= 1024px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &__title {
+    @extend %h1, %h1--gradient;
+    margin-bottom: -15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    @media (width >= 1440px) {
+      flex-direction: row;
+      column-gap: 10px;
+    }
+  }
+
+  &__list-item {
+    @extend %p--small;
+    color: $grey--500;
+
+    @media (width >=1440px) {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      white-space: nowrap;
+
+      &:not(:first-child) {
+        &::before {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $grey--400;
+        }
+      }
+    }
+  }
+
+  &__list-link {
+    font-size: 16px;
+    color: $light-blue--300;
+    transition: color $animation-duration ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 30px;
+    border-top: 4px solid $grey--400;
+  }
+
+  &__text {
+    @extend %p;
+    color: $dark;
+  }
+
+  &__subtitle {
+    @extend %h3--caps;
+    color: $dark-blue--500;
+    margin-bottom: -15px;
   }
 }

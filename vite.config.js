@@ -18,13 +18,13 @@ const getHtmlInputs = () => {
 };
 
 export default defineConfig({
-  root: "",
-  base: "",
+  root: __dirname, // Установите root директорию
+  base: '/', // Установите base URL
   build: {
     rollupOptions: {
       input: {
         ...getHtmlInputs(),
-        main: resolve(__dirname, "src/js/script.js"),  // Укажите путь к вашему script.js в src/js/
+        main: resolve(__dirname, "src/js/script.js"),
       },
     },
     outDir: "dist",

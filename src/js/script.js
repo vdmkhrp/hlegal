@@ -4,6 +4,7 @@ const closeBtn = document.querySelector(".close-btn");
 const tabsItems = document.querySelectorAll(".tabs__item");
 const swiperPag = document.querySelectorAll(".swiper-pagination__btn");
 const cardItemLinks = document.querySelectorAll(".teams__card-item-link");
+const langBtn = document.querySelectorAll(".header__lang-btn");
 
 burgerBtn.addEventListener("click", () => {
   menu.classList.toggle("active");
@@ -27,9 +28,9 @@ swiperPag.forEach((item) => {
   });
 });
 
-// cardItemLinks.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     cardItemLinks.forEach((el) => el.classList.remove("teams__card-item-link--active"));
-//     item.classList.add("teams__card-item-link--active");
-//   });
-// });
+langBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    langBtn.forEach((el) => el.classList.remove("header__lang-btn--active"));
+    item.classList.add("header__lang-btn--active");
+  });
+});

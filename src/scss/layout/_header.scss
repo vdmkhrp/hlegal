@@ -70,7 +70,9 @@
     background-color: transparent;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color $animation-duration ease-in-out;
+    transition-property: background-color, color;
+    transition-duration: $animation-duration;
+    transition-timing-function: ease-in-out;
 
     @media (hover: hover) {
       &:hover {

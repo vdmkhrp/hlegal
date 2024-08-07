@@ -1,0 +1,74 @@
+.achievements {
+  background-color: $grey--200;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__title {
+    @extend %h3--caps;
+    color: $dark-blue--500;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-item {
+    width: 255px;
+    height: 90px;
+    background-color: $light;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-item-image {
+    display: block;
+    height: 40px;
+
+    @media (width >= 1024px) {
+      height: 60px;
+    }
+  }
+
+  &__card-item-legal {
+    max-width: 54px;
+
+    @media (width >= 1024px) {
+      max-width: 80px;
+    }
+  }
+
+  &__card-item-bonus {
+    max-width: 106px;
+
+    @media (width >= 1024px) {
+      max-width: 159px;
+    }
+  }
+
+  &__card-item-market-leaders {
+    max-width: 130px;
+
+    @media (width >= 1024px) {
+      max-width: 195px;
+    }
+  }
+
+  &__card-item-law-firms {
+    max-width: 111px;
+
+    @media (width >= 1024px) {
+      max-width: 166px;
+    }
+  }
+}

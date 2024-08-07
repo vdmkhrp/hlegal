@@ -1,0 +1,145 @@
+.about {
+  padding-bottom: 60px;
+
+  &__container {
+    @media (width >= 1440px) {
+      max-width: 1200px;
+    }
+
+    @media (width >= 1920px) {
+      max-width: 1360px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (width >= 1024px) {
+      flex-direction: row;
+      column-gap: 30px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__title {
+    @extend %h1, %h1--gradient;
+    padding-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 1.5789;
+    color: $dark;
+  }
+
+  &__statistics {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-left: 4px solid $grey--400;
+
+    @media (width >= 1024px) {
+      flex-shrink: 0;
+      flex-basis: 388px;
+      height: 322px;
+      padding-top: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__statistics-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__statistics-item-header {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__statistics-item-title {
+    @extend %h1--gradient;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__statistics-item-description {
+    font-size: 16px;
+    color: $dark-blue--500;
+  }
+
+  &__team {
+    background-image: url("../img/team.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 114px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (width >= 768px) {
+      height: 234px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    @media (width >= 1024px) {
+      height: 312px;
+    }
+
+    @media (width >= 1440px) {
+      height: 438px;
+    }
+
+    @media (width >= 1920px) {
+      height: 584px;
+    }
+  }
+
+  &__team-title {
+    text-transform: uppercase;
+    color: rgba($light, 0.8);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.3611em;
+    text-shadow: 0px 15px 20px rgba($dark-blue--700, 0.8);
+
+    @media (width >= 768px) {
+      font-size: 46px;
+      letter-spacing: 1.3695em;
+    }
+
+    @media (width >= 1024px) {
+      font-size: 86px;
+      letter-spacing: 0.7325em;
+    }
+
+    @media (width >= 1440px) {
+      font-size: 96px;
+      letter-spacing: 0.6562em;
+    }
+  }
+
+  &__right {
+    @media (width >= 1024px) {
+      padding-left: 30px;
+      flex-basis: 362px;
+      flex-shrink: 0;
+    }
+  }
+}

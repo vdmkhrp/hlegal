@@ -15,3 +15,7 @@
 .show-mobile {
   display: flex;
 }
+
+.hide {
+  @extend %visually-hidden;
+}

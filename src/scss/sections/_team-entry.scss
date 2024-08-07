@@ -1,0 +1,18 @@
+.team-entry {
+  padding-bottom: 60px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 12px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

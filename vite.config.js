@@ -2,10 +2,10 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import fs from "fs";
 import { dirname } from "path";
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 const __dirname = dirname(new URL(import.meta.url).pathname);
 
-// Функция для автоматического обнаружения HTML файлов
 const getHtmlInputs = () => {
   const files = fs
     .readdirSync(__dirname)
@@ -18,8 +18,13 @@ const getHtmlInputs = () => {
 };
 
 export default defineConfig({
-  root: __dirname, // Установите root директорию
-  base: '/', // Установите base URL
+  root: __dirname,
+  base: '/',
+  plugins: [
+    createHtmlPlugin({
+      minify: true,
+    })
+  ],
   build: {
     rollupOptions: {
       input: {

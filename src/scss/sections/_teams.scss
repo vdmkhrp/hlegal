@@ -1,4 +1,5 @@
 .teams {
+  $root: &;
   padding-bottom: 60px;
 
   &__container {
@@ -15,7 +16,90 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
+    @media (width >= 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    @media (width >= 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
+  &__card-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
 
+  &__card-item-image {
+    display: block;
+    border-radius: 12px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @media (width >= 768px) {
+      height: 400px;
+    }
+  }
+
+  &__card-item-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 15px;
+  }
+
+  &__card-item-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__card-item-name {
+    @extend %h4;
+    color: $dark-blue--500;
+    transition: color $animation-duration ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__card-item-job {
+    @extend %p--small;
+    color: $grey--500;
+  }
+
+  &__card-item-link {
+    width: 32px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey--200;
+    color: $light-blue--300;
+    transition-property: background-color, color, rotate;
+    transition-duration: $animation-duration;
+    transition-timing-function: ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--300;
+        color: $accent;
+      }
+    }
+
+    &--active {
+      rotate: -90deg;
+      color: $accent;
+    }
+  }
 }

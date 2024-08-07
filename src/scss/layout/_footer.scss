@@ -89,4 +89,12 @@
       order: 0;
     }
   }
+
+  &--border-off {
+    #{$root} {
+      &__container {
+        border: none;
+      }
+    }
+  }
 }

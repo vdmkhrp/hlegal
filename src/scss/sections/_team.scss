@@ -16,9 +16,10 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     overflow: hidden;
+    flex-shrink: 0;
 
     @media (width >= 1024px) {
-      min-width: 400px;
+      width: 400px;
       height: auto;
       border-top-right-radius: 0;
       border-bottom-left-radius: 12px;
@@ -43,6 +44,13 @@
     display: inline-flex;
     align-items: center;
     margin-bottom: 5px;
+    transition: color $animation-duration ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 
   &__card-title {

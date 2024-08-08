@@ -19,16 +19,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-inline: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (width >= 768px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-inline: 0;
+    }
   }
 
   &__card-item {
-    width: 255px;
     height: 90px;
     background-color: $light;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 255px;
+
+    @media (width >= 768px) {
+      min-width: auto;
+    }
+
+    &--non-active {
+      display: none;
+
+      @media (width >= 768px) {
+        display: flex;
+      }
+    }
   }
 
   &__card-item-image {

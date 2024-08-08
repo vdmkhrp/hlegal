@@ -22,5 +22,11 @@
         background-color: $light-blue--300;
       }
     }
+
+    &--non-active {
+      @media (width >= 768px) {
+        display: none;
+      }
+    }
   }
 }

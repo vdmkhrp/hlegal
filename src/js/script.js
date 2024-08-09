@@ -45,6 +45,7 @@ const enableBtn = (btn) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  const expLink = document.querySelectorAll(".experience__link");
   const menuToggleElements = document.querySelectorAll("[data-menu-toggle]");
   const menuCloseElements = document.querySelectorAll("[data-menu-close]");
   const menu = document.querySelector(".header__nav");
@@ -118,4 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.add("tabs__item--active");
     });
   });
+
+  expLink.forEach((item) => {
+    item.addEventListener("click", () => {
+      expLink.forEach((el) => el.classList.remove("experience__link--active"));
+      item.classList.add("experience__link--active");
+    });
+  });
+
 });

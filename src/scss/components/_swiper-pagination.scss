@@ -13,7 +13,7 @@
     background-color: $light-blue--100;
     transition: background-color $animation-duration ease-in-out;
 
-    &--active {
+    &.glide__bullet--active {
       background-color: $light-blue--300;
     }
 

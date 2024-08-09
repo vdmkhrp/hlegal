@@ -1,5 +1,6 @@
 .main-button {
   @extend %h4;
+  position: relative;
   min-width: 183px;
   display: flex;
   align-items: center;
@@ -14,19 +15,35 @@
   transition-property: background-color, transform;
   transition-duration: $animation-duration;
   transition-timing-function: ease-out;
+  user-select: none;
+
+  &::before {
+    content: '';
+    @extend .preloader;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    visibility: hidden;
+  }
 
   @media (hover: hover) {
     &:hover {
       background-color: $light-blue--400;
     }
   }
+
   &:active {
     background-color: $light-blue--500;
     transform: translateY(3px);
   }
-  .preloader {
-    display: none;
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
   }
+
   &--response {
     box-shadow: none;
     background-color: $grey--300;
@@ -38,17 +55,15 @@
       background-color: $grey--300;
     }
   }
+
   &--loader {
+    color: transparent;
     box-shadow: none;
     background-color: $grey--300;
-    &:hover {
-      background-color: $grey--400;
-    }
-    &:active {
-      background-color: $grey--300;
-    }
-    .preloader {
-      display: block;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

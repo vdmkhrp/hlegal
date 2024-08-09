@@ -1,36 +1,55 @@
-const burgerBtn = document.querySelector(".burger-btn");
-const menu = document.querySelector(".header__nav");
-const closeBtn = document.querySelector(".close-btn");
-const tabsItems = document.querySelectorAll(".tabs__item");
-const swiperPag = document.querySelectorAll(".swiper-pagination__btn");
-const cardItemLinks = document.querySelectorAll(".teams__card-item-link");
-const langBtn = document.querySelectorAll(".header__lang-btn");
+import Glide from "@glidejs/glide";
 
-burgerBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+new Glide(".glide", {
+  type: "carousel",
+}).mount();
 
-closeBtn.addEventListener("click", () => {
-  menu.classList.remove("active");
-});
+// const burgerBtn = document.querySelector(".burger-btn");
+// const menu = document.querySelector(".header__nav");
+// const closeBtn = document.querySelector(".close-btn");
+// const tabsItems = document.querySelectorAll(".tabs__item");
+// const langBtn = document.querySelectorAll(".header__lang-btn");
+// const contactBtn = document.querySelector("#contact-btn");
+// const contactForm = document.querySelector("#contact-form");
 
-tabsItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    tabsItems.forEach((el) => el.classList.remove("tabs__item--active"));
-    item.classList.add("tabs__item--active");
-  });
-});
+// burgerBtn.addEventListener("click", () => {
+//   menu.classList.toggle("active");
+// });
 
-swiperPag.forEach((item) => {
-  item.addEventListener("click", () => {
-    swiperPag.forEach((el) => el.classList.remove("swiper-pagination__btn--active"));
-    item.classList.add("swiper-pagination__btn--active");
-  });
-});
+// closeBtn.addEventListener("click", () => {
+//   menu.classList.remove("active");
+// });
 
-langBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    langBtn.forEach((el) => el.classList.remove("header__lang-btn--active"));
-    item.classList.add("header__lang-btn--active");
-  });
-});
+// tabsItems.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     tabsItems.forEach((el) => el.classList.remove("tabs__item--active"));
+//     item.classList.add("tabs__item--active");
+//   });
+// });
+
+// langBtn.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     langBtn.forEach((el) => el.classList.remove("header__lang-btn--active"));
+//     item.classList.add("header__lang-btn--active");
+//   });
+// });
+
+// if (contactForm) {
+//   contactForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     disableBtn(contactBtn);
+//     setTimeout(() => {
+//       enableBtn(contactBtn);
+//     }, 2000);
+//   });
+// }
+
+// function disableBtn(btn) {
+//   btn.classList.add("main-button--loader");
+//   btn.disabled = true;
+// }
+
+// function enableBtn(btn) {
+//   btn.classList.remove("main-button--loader");
+//   btn.disabled = false;
+// }

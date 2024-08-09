@@ -1,0 +1,92 @@
+.contact {
+  padding-bottom: 30px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (width >= 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      max-width: 1200px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-size: 21px;
+    line-height: 1.4285;
+    color: $dark-blue--500;
+
+    &:not(:last-child) {
+      border-bottom: 4px solid $grey--400;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__list-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: $light-blue--300;
+    transition: color $animation-duration ease-in;
+
+    &--color {
+      color: $dark-blue--500;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__list-link-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-link-text {
+    @extend %h3--caps;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  &__form {
+    background-color: $grey--200;
+    border-radius: 12px;
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__button {
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+
+    &:not(:disabled) {
+      animation-name: bounce;
+    }
+  }
+}
+
+@keyframes bounce {
+  100% {
+    scale: 1.06;
+  }
+}

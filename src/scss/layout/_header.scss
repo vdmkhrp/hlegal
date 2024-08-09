@@ -74,16 +74,16 @@
     transition-duration: $animation-duration;
     transition-timing-function: ease-in-out;
 
-    @media (hover: hover) {
-      &:hover {
-        background-color: rgba($light, 0.2);
-      }
-    }
-
     &--active {
       color: $light;
       pointer-events: none;
       background-color: $accent;
+    }
+
+    @media (hover: hover) {
+      &:not(&--active):hover {
+        background-color: rgba($light, 0.2);
+      }
     }
   }
 
@@ -326,7 +326,7 @@
         color: $grey--500;
 
         @media (hover: hover) {
-          &:hover {
+          &:not(&--active):hover {
             background-color: $grey--200;
           }
         }

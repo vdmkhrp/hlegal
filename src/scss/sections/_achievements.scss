@@ -9,6 +9,12 @@
     row-gap: 30px;
   }
 
+  &__carousel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
   &__title {
     @extend %h3--caps;
     color: $dark-blue--500;

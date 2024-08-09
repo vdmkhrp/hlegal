@@ -636,7 +636,7 @@
               >services</span
             >
           </a>
-          <button type="button" class="burger-btn">
+          <button type="button" class="burger-btn" data-menu-toggle>
             <span class="burger-btn__item"></span>
           </button>
           <div class="header__nav">
@@ -647,7 +647,11 @@
               >publications</a
             >
             <a href="./contact.html" class="header__nav-link">contact</a>
-            <button type="button" class="close-btn header__nav-close-btn">
+            <button
+              type="button"
+              class="close-btn header__nav-close-btn"
+              data-menu-close
+            >
               <svg class="icon icon--18">
                 <use xlink:href="#close" />
               </svg>
@@ -794,8 +798,8 @@
       </section>
     </div>
     <section class="team">
-      <div class="container">
-        <div class="glide">
+      <div class="container team__container">
+        <div class="glide main-page-carousel">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
               <li class="glide__slide">
@@ -847,10 +851,10 @@
                       гарантуємо чесну, вчасну допомогу, навіть у ситуаціях,
                       коли більшість безсилі.
                     </h2>
-                    <h4 class="team__card-subtitle">
-                      Евгений Патриков
-                    </h4>
-                    <p class="team__card-text">Equity partner, Attorney-at-law</p>
+                    <h4 class="team__card-subtitle">Евгений Патриков</h4>
+                    <p class="team__card-text">
+                      Equity partner, Attorney-at-law
+                    </p>
                   </div>
                 </div>
               </li>
@@ -875,19 +879,17 @@
                       гарантуємо чесну, вчасну допомогу, навіть у ситуаціях,
                       коли більшість безсилі.
                     </h2>
-                    <h4 class="team__card-subtitle">
-                      Vladislav Melnik
-                    </h4>
+                    <h4 class="team__card-subtitle">Vladislav Melnik</h4>
                     <p class="team__card-text">Associate</p>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="glide__bullets swiper-pagination" data-glide-el="controls[nav]">
-            <button class="glide__bullet swiper-pagination__btn" data-glide-dir="=0"></button>
-            <button class="glide__bullet swiper-pagination__btn" data-glide-dir="=1"></button>
-            <button class="glide__bullet swiper-pagination__btn" data-glide-dir="=2"></button>
+          <div class="swiper-pagination" data-glide-el="controls[nav]">
+            <button class="swiper-pagination__btn" data-glide-dir="=0"></button>
+            <button class="swiper-pagination__btn" data-glide-dir="=1"></button>
+            <button class="swiper-pagination__btn" data-glide-dir="=2"></button>
           </div>
         </div>
       </div>

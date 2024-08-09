@@ -633,7 +633,7 @@
           </svg>
           <span class="header__logo-text">about us</span>
         </a>
-        <button type="button" class="burger-btn burger-btn--dark">
+        <button type="button" class="burger-btn burger-btn--dark" data-menu-toggle>
           <span class="burger-btn__item"></span>
         </button>
         <div class="header__nav">
@@ -644,9 +644,11 @@
           >
           <a href="./services.html" class="header__nav-link">services</a>
           <a href="./team.html" class="header__nav-link">team</a>
-          <a href="./publications.html" class="header__nav-link">publications</a>
+          <a href="./publications.html" class="header__nav-link"
+            >publications</a
+          >
           <a href="./contact.html" class="header__nav-link">contact</a>
-          <button type="button" class="close-btn header__nav-close-btn">
+          <button type="button" class="close-btn header__nav-close-btn" data-menu-close>
             <svg class="icon icon--18">
               <use xlink:href="#close" />
             </svg>
@@ -745,32 +747,54 @@
     <section class="achievements">
       <div class="container achievements__container">
         <h3 class="achievements__title">achievements</h3>
-        <div class="achievements__cards">
-          <article class="achievements__card-item">
-            <img src="./src/img/achievment-1.webp" alt="achievment-1" class="achievements__card-item-image achievements__card-item-legal" />
-          </article>
-          <article class="achievements__card-item achievements__card-item--non-active">
-            <img src="./src/img/achievment-2.webp" alt="achievment-2" class="achievements__card-item-image
-            achievements__card-item-bonus" />
-          </article>
-          <article class="achievements__card-item achievements__card-item--non-active">
-            <img src="./src/img/achievment-3.webp" alt="achievment-3" class="achievements__card-item-image achievements__card-item- market-leaders" />
-          </article>
-          <article class="achievements__card-item achievements__card-item--non-active">
-            <img src="./src/img/achievment-4.webp" alt="achievment-4" class="achievements__card-item-image achievements__card-item-law-firms" />
-          </article>
-        </div>
-        <div class="swiper-pagination">
-          <button
-            type="button"
-            class="swiper-pagination__btn swiper-pagination__btn--active"
-          ></button>
-          <button type="button" class="swiper-pagination__btn"></button>
-          <button type="button" class="swiper-pagination__btn"></button>
-          <button type="button" class="swiper-pagination__btn swiper-pagination__btn--non-active"></button>
-          <button type="button" class="swiper-pagination__btn swiper-pagination__btn--non-active"></button>
-          <button type="button" class="swiper-pagination__btn swiper-pagination__btn--non-active"></button>
-          <button type="button" class="swiper-pagination__btn swiper-pagination__btn--non-active"></button>
+
+        <div class="glide about-page-carousel achievements__carousel">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <article class="achievements__card-item">
+                  <img
+                    src="./src/img/achievment-1.webp"
+                    alt="achievment-1"
+                    class="achievements__card-item-image achievements__card-item-legal"
+                  />
+                </article>
+              </li>
+              <li class="glide__slide">
+                <article class="achievements__card-item">
+                  <img
+                    src="./src/img/achievment-2.webp"
+                    alt="achievment-2"
+                    class="achievements__card-item-image achievements__card-item-bonus"
+                  />
+                </article>
+              </li>
+              <li class="glide__slide">
+                <article class="achievements__card-item">
+                  <img
+                    src="./src/img/achievment-3.webp"
+                    alt="achievment-3"
+                    class="achievements__card-item-image achievements__card-item- market-leaders"
+                  />
+                </article>
+              </li>
+              <li class="glide__slide">
+                <article class="achievements__card-item">
+                  <img
+                    src="./src/img/achievment-4.webp"
+                    alt="achievment-4"
+                    class="achievements__card-item-image achievements__card-item-law-firms"
+                  />
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-pagination" data-glide-el="controls[nav]">
+            <button class="swiper-pagination__btn" data-glide-dir="=0"></button>
+            <button class="swiper-pagination__btn" data-glide-dir="=1"></button>
+            <button class="swiper-pagination__btn" data-glide-dir="=2"></button>
+            <button class="swiper-pagination__btn" data-glide-dir="=3"></button>
+          </div>
         </div>
       </div>
     </section>

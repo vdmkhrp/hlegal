@@ -10,6 +10,19 @@
 
   &__title {
     @extend %h1, %h1--gradient;
+
+    @media (width >= 1024px) {
+      max-width: 664px;
+      margin-inline: auto;
+    }
+
+    @media (width >= 1024px) {
+      max-width: 1080px;
+    }
+
+    @media (width >= 1920px) {
+      max-width: 1360px;
+    }
   }
 
   &__cards {

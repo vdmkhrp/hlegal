@@ -68,6 +68,10 @@
     padding-bottom: 30px;
     line-height: 1.2;
     word-break: break-all;
+
+    @media (width >= 768px) {
+      word-break: normal;
+    }
   }
 
   &__card-subtitle {

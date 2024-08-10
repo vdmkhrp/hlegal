@@ -52,6 +52,9 @@ const enableBtn = (btn) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  const popupOpenButton = document.querySelector('.service-entry__block-button');
+  const popupCloseButton = document.querySelector(".popup__close");
+  const popup = document.querySelector("#my-popover");
   const expLink = document.querySelectorAll(".experience__link");
   const menuToggleElements = document.querySelectorAll("[data-menu-toggle]");
   const menuCloseElements = document.querySelectorAll("[data-menu-close]");
@@ -132,5 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
       expLink.forEach((el) => el.classList.remove("experience__link--active"));
       item.classList.add("experience__link--active");
     });
+  });
+
+  popupOpenButton.addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+
+  popupCloseButton.addEventListener("click", () => {
+    popup.style.display = "none";
   });
 });

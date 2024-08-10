@@ -168,6 +168,7 @@
   &__logo-icon {
     width: 12px;
     height: 26px;
+    flex-shrink: 0;
 
     @media (width >= 768px) {
       width: 21px;
@@ -185,6 +186,10 @@
     font-size: 20px;
     font-weight: 400;
     color: $light;
+    overflow: hidden;
+    border-right: 6px solid $accent;
+    width: 0;
+    animation: typing 3s forwards;
 
     @media (width >= 768px) {
       font-size: 36px;
@@ -217,7 +222,6 @@
     visibility: hidden;
     transition: opacity $animation-duration ease-in-out;
     box-shadow: 0px -15px 80px 0px rgba($dark-blue--700, 0.5);
-
 
     @media (width >= 768px) {
       flex-direction: row;
@@ -368,5 +372,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    border: none;
   }
 }

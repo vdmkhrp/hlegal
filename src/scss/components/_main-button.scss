@@ -48,9 +48,11 @@
     box-shadow: none;
     background-color: $grey--300;
     color: $dark-blue--500;
+
     &:hover {
       background-color: $grey--500;
     }
+
     &:active {
       background-color: $grey--300;
     }

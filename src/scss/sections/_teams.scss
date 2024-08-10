@@ -32,21 +32,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-
-    @media (hover: hover) {
-      &:hover {
-        #{$root} {
-          &__card-item-name {
-            color: $accent;
-          }
-
-          &__card-item-link {
-            color: $accent;
-            background-color: $grey--300;
-          }
-        }
-      }
-    }
   }
 
   &__card-item-image {
@@ -79,6 +64,12 @@
     @extend %h4;
     color: $dark-blue--500;
     transition: color $animation-duration ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 
   &__card-item-job {
@@ -95,8 +86,20 @@
     justify-content: center;
     background-color: $grey--200;
     color: $light-blue--300;
-    transition-property: background-color, color;
+    transition-property: background-color, color, rotate;
     transition-duration: $animation-duration;
     transition-timing-function: ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $grey--300;
+        color: $accent;
+      }
+    }
+
+    &--active {
+      rotate: -90deg;
+      color: $accent;
+    }
   }
 }

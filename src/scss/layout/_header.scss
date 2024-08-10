@@ -216,6 +216,8 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity $animation-duration ease-in-out;
+    box-shadow: 0px -15px 80px 0px rgba($dark-blue--700, 0.5);
+
 
     @media (width >= 768px) {
       flex-direction: row;
@@ -228,6 +230,7 @@
       border-radius: 0;
       opacity: 1;
       visibility: visible;
+      box-shadow: none;
     }
 
     @media (width >= 1024px) {

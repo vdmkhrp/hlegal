@@ -9,13 +9,17 @@ const defaultCarouselSettings = {
   },
 };
 
+const defaultBreakpoints = {
+  1023: {
+    peek: 60,
+  },
+};
+
 const mainPageCarouselSettings = {
   ...defaultCarouselSettings,
   gap: 60,
   breakpoints: {
-    1023: {
-      peek: 60,
-    },
+    ...defaultBreakpoints,
     767: {
       peek: 30,
       gap: 30,
@@ -28,8 +32,11 @@ const aboutPageCarouselSettings = {
   perView: 4,
   gap: 30,
   breakpoints: {
+    ...defaultBreakpoints,
     767: {
       perView: 1,
+      peek: 30,
+      gap: 30,
     },
   },
 };
@@ -126,5 +133,4 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.add("experience__link--active");
     });
   });
-
 });

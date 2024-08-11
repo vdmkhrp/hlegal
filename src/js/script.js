@@ -52,7 +52,9 @@ const enableBtn = (btn) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const popupOpenButton = document.querySelector('.service-entry__block-button');
+  const popupOpenButton = document.querySelector(
+    ".service-entry__block-button"
+  );
   const popupCloseButton = document.querySelector(".popup__close");
   const popup = document.querySelector("#my-popover");
   const expLink = document.querySelectorAll(".experience__link");
@@ -137,11 +139,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  popupOpenButton.addEventListener("click", () => {
-    popup.style.display = "block";
-  });
+  if (popupOpenButton && popupCloseButton && popup) {
+    popupOpenButton.addEventListener("click", () => {
+      popup.style.display = "block";
+    });
 
-  popupCloseButton.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
+    popupCloseButton.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
 });

@@ -6,6 +6,11 @@
     border-top: 2px solid $grey--400;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  &__content {
+    max-width: 398px;
+    margin-inline: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -14,12 +19,17 @@
     @media (width >= 768px) {
       text-align: start;
     }
+
+    @media (width >= 1024px) {
+      text-align: start;
+      max-width: 100%;
+    }
   }
 
   &__top {
     display: contents;
 
-    @media (width >= 768px) {
+    @media (width >= 1024px) {
       display: flex;
       justify-content: space-between;
     }
@@ -84,7 +94,7 @@
     order: 1;
     padding-top: 9px;
 
-    @media (width >= 768px) {
+    @media (width >= 1024px) {
       padding-top: 0;
       order: 0;
     }

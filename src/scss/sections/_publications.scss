@@ -1,6 +1,4 @@
 .publications {
-  padding-top: 30px;
-  padding-bottom: 30px;
   background-color: $grey--200;
 
   &__link {
@@ -13,18 +11,10 @@
 
   &__title {
     @extend %h1, %h1--gradient;
-    padding-bottom: 30px;
   }
 
   &__cards {
-    display: flex;
-    flex-direction: column;
     gap: 30px;
-
-    @media (width >= 768px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
   }
 
   &__cards-item {
@@ -32,14 +22,13 @@
     overflow: hidden;
     background-color: $light;
 
-      @media (width >= 768px) {
-        flex-grow: 1;
-        flex-basis: 290px;
-      }
+    @include media-breakpoint-up(md) {
+      flex-basis: 290px;
+    }
 
-      @media (width >= 1024px) {
-        flex-basis: calc(33.3333% - 20px);
-      }
+    @include media-breakpoint-up(xl) {
+      flex-basis: calc(33.3333% - 20px);
+    }
   }
 
   &__cards-item-image {
@@ -50,14 +39,9 @@
     object-position: center;
   }
 
-  &__cards-item-content {
-    padding: 30px;
-  }
-
   &__cards-item-title {
     @extend %h4;
     color: $light-blue--300;
-    padding-bottom: 15px;
   }
 
   &__cards-item-date {
@@ -65,7 +49,6 @@
     font-size: 12px;
     font-weight: 700;
     color: $grey--500;
-    padding-bottom: 15px;
 
     &::before {
       content: "";
@@ -84,14 +67,5 @@
     @extend %p--small;
     color: $dark;
     padding-top: 19px;
-  }
-
-  &__button {
-    margin-inline: auto;
-    margin-top: 30px;
-  }
-
-  &__tabs {
-    margin: auto auto 30px;
   }
 }

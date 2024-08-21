@@ -13,22 +13,12 @@
     @extend %h1, %h1--gradient;
   }
 
-  &__cards {
-    gap: 30px;
-  }
-
   &__cards-item {
+    display: block;
+    height: 100%;
     border-radius: 8px;
     overflow: hidden;
     background-color: $light;
-
-    @include media-breakpoint-up(md) {
-      flex-basis: 290px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      flex-basis: calc(33.3333% - 20px);
-    }
   }
 
   &__cards-item-image {

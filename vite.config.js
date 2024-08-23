@@ -19,32 +19,48 @@ const getHtmlInputs = () => {
 };
 
 const pageData = {
-  '/index.html': {
-    title: 'Homepage',
+  "/index.html": {
+    headerClasses: "header--absolute",
+    title: "Homepage",
+    isDark: false,
+    footerClass: "",
   },
-  '/services.html': {
-    title: 'Services',
+  "/services.html": {
+    title: "Services",
+    isDark: false,
+    footerClass: "footer--border-off",
   },
-  '/about.html': {
-    title: 'About',
+  "/about.html": {
+    title: "About",
+    isDark: true,
+    footerClass: "",
   },
-  '/contact.html': {
-    title: 'Contact',
+  "/contact.html": {
+    title: "Contact",
+    isDark: true,
+    footerClass: "footer--border-off",
   },
-  '/publication-entry.html': {
-    title: 'Publication',
+  "/publication-entry.html": {
+    title: "Publication",
+    isDark: true,
+    footerClass: "",
   },
-  '/publications.html': {
-    title: 'Publications',
+  "/publications.html": {
+    title: "Publications",
+    isDark: true,
+    footerClass: "",
   },
-  '/service-entry.html': {
-    title: 'Services',
+  "/service-entry.html": {
+    title: "Services",
+    isDark: false,
   },
-  '/team.html': {
-    title: 'Teams',
+  "/team.html": {
+    title: "Teams",
+    isDark: true,
   },
-  '/team-entry.html': {
-    title: 'Teams',
+  "/team-entry.html": {
+    title: "Teams",
+    isDark: true,
   },
 };
 
@@ -55,7 +71,7 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),
       context(pagePath) {
-        return pageData[pagePath];
+        return pageData[pagePath] || {};
       },
     }),
     createHtmlPlugin({
